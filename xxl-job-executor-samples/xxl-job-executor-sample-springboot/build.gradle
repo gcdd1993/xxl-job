@@ -1,0 +1,7 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.7'
+    implementation project(':xxl-job-core')
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.7'
+}
+
+description = 'xxl-job-executor-sample-springboot'

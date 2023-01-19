@@ -1,0 +1,6 @@
+rootProject.name = 'xxl-job'
+include(':xxl-job-admin')
+include(':xxl-job-executor-samples')
+include(':xxl-job-core')
+include(':xxl-job-executor-samples:xxl-job-executor-sample-springboot')
+include(':xxl-job-executor-samples:xxl-job-executor-sample-frameless')
