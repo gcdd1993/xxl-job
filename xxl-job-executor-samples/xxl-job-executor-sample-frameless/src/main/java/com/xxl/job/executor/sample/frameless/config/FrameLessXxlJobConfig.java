@@ -1,7 +1,7 @@
 package com.xxl.job.executor.sample.frameless.config;
 
-import com.xxl.job.executor.sample.frameless.jobhandler.SampleXxlJob;
 import com.xxl.job.core.executor.impl.XxlJobSimpleExecutor;
+import com.xxl.job.executor.sample.frameless.jobhandler.SampleXxlJob;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,6 +18,7 @@ public class FrameLessXxlJobConfig {
 
 
     private static FrameLessXxlJobConfig instance = new FrameLessXxlJobConfig();
+
     public static FrameLessXxlJobConfig getInstance() {
         return instance;
     }
@@ -70,7 +71,8 @@ public class FrameLessXxlJobConfig {
         try {
             ClassLoader loder = Thread.currentThread().getContextClassLoader();
 
-            in = new InputStreamReader(loder.getResourceAsStream(propertyFileName), "UTF-8");;
+            in = new InputStreamReader(loder.getResourceAsStream(propertyFileName), "UTF-8");
+            ;
             if (in != null) {
                 Properties prop = new Properties();
                 prop.load(in);

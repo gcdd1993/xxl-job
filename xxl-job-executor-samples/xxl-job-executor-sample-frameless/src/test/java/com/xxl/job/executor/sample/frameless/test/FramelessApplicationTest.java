@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class FramelessApplicationTest {
 
     @Test
-    public void test(){
+    public void test() {
         System.out.println("111");
     }
 

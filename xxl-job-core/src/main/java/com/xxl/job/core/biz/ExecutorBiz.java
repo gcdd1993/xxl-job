@@ -1,6 +1,11 @@
 package com.xxl.job.core.biz;
 
-import com.xxl.job.core.biz.model.*;
+import com.xxl.job.core.biz.model.IdleBeatParam;
+import com.xxl.job.core.biz.model.KillParam;
+import com.xxl.job.core.biz.model.LogParam;
+import com.xxl.job.core.biz.model.LogResult;
+import com.xxl.job.core.biz.model.ReturnT;
+import com.xxl.job.core.biz.model.TriggerParam;
 
 /**
  * Created by xuxueli on 17/3/1.
@@ -9,6 +14,7 @@ public interface ExecutorBiz {
 
     /**
      * beat
+     *
      * @return
      */
     public ReturnT<String> beat();
@@ -23,6 +29,7 @@ public interface ExecutorBiz {
 
     /**
      * run
+     *
      * @param triggerParam
      * @return
      */
@@ -30,6 +37,7 @@ public interface ExecutorBiz {
 
     /**
      * kill
+     *
      * @param killParam
      * @return
      */
@@ -37,6 +45,7 @@ public interface ExecutorBiz {
 
     /**
      * log
+     *
      * @param logParam
      * @return
      */

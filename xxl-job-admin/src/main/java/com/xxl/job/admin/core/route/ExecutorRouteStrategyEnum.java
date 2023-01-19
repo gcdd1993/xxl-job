@@ -1,6 +1,14 @@
 package com.xxl.job.admin.core.route;
 
-import com.xxl.job.admin.core.route.strategy.*;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteBusyover;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteConsistentHash;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteFailover;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteFirst;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteLFU;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteLRU;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteLast;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteRandom;
+import com.xxl.job.admin.core.route.strategy.ExecutorRouteRound;
 import com.xxl.job.admin.core.util.I18nUtil;
 
 /**
@@ -30,13 +38,14 @@ public enum ExecutorRouteStrategyEnum {
     public String getTitle() {
         return title;
     }
+
     public ExecutorRouter getRouter() {
         return router;
     }
 
-    public static ExecutorRouteStrategyEnum match(String name, ExecutorRouteStrategyEnum defaultItem){
+    public static ExecutorRouteStrategyEnum match(String name, ExecutorRouteStrategyEnum defaultItem) {
         if (name != null) {
-            for (ExecutorRouteStrategyEnum item: ExecutorRouteStrategyEnum.values()) {
+            for (ExecutorRouteStrategyEnum item : ExecutorRouteStrategyEnum.values()) {
                 if (item.name().equals(name)) {
                     return item;
                 }

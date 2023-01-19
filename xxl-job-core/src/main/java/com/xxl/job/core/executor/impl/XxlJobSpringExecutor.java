@@ -88,10 +88,10 @@ public class XxlJobSpringExecutor extends XxlJobExecutor implements ApplicationC
             // get bean
             Object bean = null;
             Lazy onBean = applicationContext.findAnnotationOnBean(beanDefinitionName, Lazy.class);
-            if (onBean!=null){
+            if (onBean != null) {
                 logger.debug("xxl-job annotation scan, skip @Lazy Bean:{}", beanDefinitionName);
                 continue;
-            }else {
+            } else {
                 bean = applicationContext.getBean(beanDefinitionName);
             }
 
@@ -108,7 +108,7 @@ public class XxlJobSpringExecutor extends XxlJobExecutor implements ApplicationC
             } catch (Throwable ex) {
                 logger.error("xxl-job method-jobhandler resolve error for bean[" + beanDefinitionName + "].", ex);
             }
-            if (annotatedMethods==null || annotatedMethods.isEmpty()) {
+            if (annotatedMethods == null || annotatedMethods.isEmpty()) {
                 continue;
             }
 
